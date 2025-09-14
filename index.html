@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: grey;
+        padding: 20px;
+      }
+
+      .board {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .column {
+        background: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 250px;
+      }
+
+      .column h3 {
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .task-list {
+        min-height: 200px;
+        border: 2px dashed #ddd;
+        padding: 10px;
+        border-radius: 6px;
+      }
+
+      .task {
+        background: #e3e3ff;
+        margin-bottom: 8px;
+        padding: 8px;
+        border-radius: 4px;
+        cursor: grab;
+      }
+
+      .task.dragging {
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="board">
+      <div class="column" id="todo">
+        <h3>To Do</h3>
+        <div class="task-list"></div>
+        <input type="text" id="taskInput" placeholder="New task..." />
+        <button id="addTaskBtn">Add Task</button>
+      </div>
+
+      <div class="column" id="inprogress">
+        <h3>In Progress</h3>
+        <div class="task-list"></div>
+      </div>
+
+      <div class="column" id="done">
+        <h3>Done</h3>
+        <div class="task-list"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
